@@ -28,6 +28,15 @@ const Links = ({}) => {
       {links.map((i) => (
         <Navlink items={i} key={i.title} />
       ))}
+      {/* Most important logic of showing admin button and login and logout links and route */}
+      {session ? (
+        <>
+          {isAdmin} && <Navlink item={{ title: "Admin", route: "/admin" }} />
+          <button>Logout</button>
+        </>
+      ) : (
+        <Navlink item={{ title: "Login", route: "/login" }} />
+      )}
     </div>
   );
 };
