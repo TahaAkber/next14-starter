@@ -13,12 +13,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        {/* main navigation bar if we want to create separate pages bar then we can do it inside pages */}
-        {/* <h1>This is the Main Tag</h1> */}
-        {/* children will have all the code that we had written */}
-        {children}
-        <Footer />
+        <div className="container">
+          <Navbar />
+          {/* main navigation bar if we want to create separate pages bar then we can do it inside pages */}
+          {/* <h1>This is the Main Tag</h1> */}
+          {/* children will have all the code that we had written */}
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
