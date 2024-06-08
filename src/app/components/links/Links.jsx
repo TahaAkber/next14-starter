@@ -22,11 +22,11 @@ const Links = ({}) => {
   return (
     <div>
       {links.map((i) => (
-        <div>
+        <>
           <Link href={i.route} key={i.title}>
             {i.title}
           </Link>
-        </div>
+        </>
       ))}
     </div>
   );
