@@ -21,21 +21,21 @@ const Links = ({}) => {
     },
   ];
 
-  const session = true;
-  const isAdmin = true;
+  const Session = true;
+  const IsAdmin = true;
   return (
     <div className={styles.logo}>
-      {links.map((i) => (
-        <Navlink items={i} key={i.title} />
+      {links.map((item) => (
+        <Navlink items={item} key={item.title} />
       ))}
       {/* Most important logic of showing admin button and login and logout links and route */}
-      {session ? (
+      {Session ? (
         <>
-          {isAdmin} && <Navlink item={{ title: "Admin", route: "/admin" }} />
+          {IsAdmin && <Navlink items={{ title: "Admin", route: "/admin" }} />}
           <button>Logout</button>
         </>
       ) : (
-        <Navlink item={{ title: "Login", route: "/login" }} />
+        <Navlink items={{ title: "Login", route: "/login" }} />
       )}
     </div>
   );

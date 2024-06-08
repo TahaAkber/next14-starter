@@ -4,19 +4,22 @@ import styles from "./navlink.module.css";
 import { usePathname } from "next/navigation";
 
 const Navlink = ({ items }) => {
+  if (!items) {
+    console.error("Navlink component received undefined items prop");
+    return null;
+  }
+  const { title, route } = items;
   const pathname = usePathname();
   return (
-    <div>
-      <Link
-        href={items.route}
-        key={items.title}
-        className={`${styles.container} ${
-          pathname === items.route ? styles.active : ""
-        }`}
-      >
-        {items.title}
-      </Link>
-    </div>
+    <Link
+      href={route}
+      key={title}
+      className={`${styles.container} ${
+        pathname === route ? styles.active : ""
+      }`}
+    >
+      {title}
+    </Link>
   );
 };
 export default Navlink;
