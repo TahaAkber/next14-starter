@@ -20,7 +20,7 @@ a {
 }
 .container {
   width: 1180px;
-  background-color: rebeccapurple;
+  background-color: var(--bg);
   margin: auto;
   padding-left: 50px;
   padding-right: 50px;
