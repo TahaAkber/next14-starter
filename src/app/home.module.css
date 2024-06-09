@@ -52,6 +52,8 @@
 .imagecontainer {
   position: relative;
 }
-
-.heroimage {
+.brand {
+  display: flex;
+  margin-right: 60px;
+  padding-right: 15px;
 }
