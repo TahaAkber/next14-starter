@@ -9,11 +9,12 @@ const Home = () => {
       <div className={styles.textcontainer}>
         <h1 className={styles.heading}>Creative Thoughts Agency.</h1>
         <p className={styles.paragraph}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ea,
-          magnam voluptatem eveniet sequi aut doloremque earum ipsam laboriosam
-          dolore possimus, quam impedit dolor deleniti aliquid placeat quos quas
-          assumenda! Fuga distinctio, quo expedita excepturi aut, dicta dolor et
-          ab ipsum odit at recusandae nemo!
+          Welcome to Our World-Class Consulting and Finance Solutions At our
+          core, we craft digital concepts that are bigger, bolder, braver, and
+          better. We believe in innovative ideas, flexibility, and precision.
+          Discover our wide range of web and software development services,
+          delivered by our exceptional team. Experience the difference with the
+          best consulting and finance solutions.
         </p>
         <div className={styles.parentcontainer}>
           <div className={styles.buttons}>
