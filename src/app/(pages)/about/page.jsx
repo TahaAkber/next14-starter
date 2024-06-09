@@ -1,11 +1,16 @@
 import Image from "next/image";
-import "./about.css";
 
 const aboutpage = () => {
   return (
     <div>
       <div className="imgcontainer">
-        <Image src="/about.png" alt="image" />
+        <Image
+          src="/about.png"
+          alt="image"
+          width={500}
+          height={500}
+          styles={{ position: "relative" }}
+        />
       </div>
     </div>
   );

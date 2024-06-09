@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+}
+.textcontainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.heading {
+  font-size: 80px;
+  margin-top: 20px;
+  padding: 20px;
+}
+.paragraph {
+  display: flex;
+}
+.parentcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align children to the start */
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start; /* Align buttons to the left */
+  align-items: flex-start; /* Ensure items align to the start */
+  width: 100%; /* Ensure the container takes the full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.button {
+  padding: 20px;
+  min-width: 120px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.button:first-child {
+  background-color: var(--btn);
+  color: white;
+}
+.brandsimage {
+  position: relative;
+  filter: grayscale(100%);
+}
+.imagecontainer {
+  position: relative;
+}
+
+.heroimage {
+}
