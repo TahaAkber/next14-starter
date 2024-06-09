@@ -3,9 +3,18 @@ import styles from "./blog.module.css";
 const blogpage = () => {
   return (
     <div className={styles.container}>
-      <Postcard />
-      <Postcard />
-      <Postcard />
+      <div className={styles.post}>
+        <Postcard />
+      </div>
+      <div className={styles.post}>
+        <Postcard />
+      </div>
+      <div className={styles.post}>
+        <Postcard />
+      </div>
+      <div className={styles.post}>
+        <Postcard />
+      </div>
     </div>
   );
 };
