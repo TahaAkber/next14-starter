@@ -1,0 +1,36 @@
+.imgcontainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+}
+.head {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--btn);
+}
+.text {
+  font-size: 55px;
+  font-weight: bold;
+}
+.desc {
+  font-weight: light;
+}
+.boxes {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.box h1 {
+  color: var(--btn);
+  font-size: 30px;
+}
