@@ -1,6 +1,25 @@
 import Image from "next/image";
 import styles from "./dynamic.module.css";
-const Page = ({}) => {
+const getdata = async (slug) => {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
+  return res.json();
+};
+const getuser = async (slug) => {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/users/${slug}`);
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
+  return res.json();
+};
+const Page = async ({ params }) => {
+  const { slug } = params;
+  console.log(params);
+
+  const post = await getdata(slug);
+  const user = await getuser(slug);
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -12,8 +31,9 @@ const Page = ({}) => {
           className={styles.image}
         />
       </div>
+
       <div className={styles.right}>
-        <h1 className={styles.title}>Post-1</h1>
+        <h1 className={styles.title}>{post.title}</h1>
         <div className={styles.detail}>
           <Image
             src="/noavatar.png"
@@ -24,20 +44,14 @@ const Page = ({}) => {
           />
           <div className={styles.detailtext}>
             <span className={styles.author}>Author</span>
-            <span className={styles.authorvalue}>Taha</span>
+            <span className={styles.authorvalue}>{user.name}</span>
           </div>
           <div className={styles.detailtext}>
             <span className={styles.date}>Date</span>
             <span className={styles.datevalue}>01-01-2024</span>
           </div>
         </div>
-        <div className={styles.contentdiv}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate
-          atque nemo in iusto sequi tempora ad ratione odio officia sapiente
-          maxime illo voluptatem, repellat qui. Cumque quis tempore sit
-          molestias, tempora nostrum! Molestiae a est vero explicabo in
-          perferendis ea alias porro ratione quae? Fugiat!
-        </div>
+        <div className={styles.contentdiv}>{post.body}</div>
       </div>
     </div>
   );
