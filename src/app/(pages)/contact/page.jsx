@@ -1,6 +1,15 @@
+import dynamic from "next/dynamic";
 import styles from "./contact.module.css";
 import Image from "next/image";
+
 const contact = () => {
+  // const [client, setclient] = useState(false);
+
+  // useEffect(() => {
+  //   setclient(true);
+  // }, []);
+  // const a = Math.random();
+  // console.log(a); //HYDRATION ERROR FIX
   return (
     <div className={styles.container}>
       <div className={styles.imgcontainer}>
@@ -27,6 +36,7 @@ const contact = () => {
           <button className={styles.button}>Send</button>
         </form>
       </div>
+      {/* <h1>{client && a}</h1> HYDRATION */}
     </div>
   );
 };

@@ -8,12 +8,12 @@ const Page = ({}) => {
           src="/post.png"
           alt=""
           width={300}
-          height={300}
+          height={350}
           className={styles.image}
         />
       </div>
       <div className={styles.right}>
-        <h1 className={styles.title}>Title</h1>
+        <h1 className={styles.title}>Post-1</h1>
         <div className={styles.detail}>
           <Image
             src="/noavatar.png"

@@ -10,20 +10,42 @@
 .right {
   flex: 2;
   flex-direction: column;
+  justify-content: flex-start;
   gap: 50px;
 }
 .title {
-  font-size: 64px;
+  font-size: 40px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 12px;
 }
 .detail {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
 }
 .image {
   object-fit: cover;
 }
 .avatar {
   object-fit: cover;
-  border-radius: 50%    ;
+  border-radius: 50%;
+}
+.detailtext {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.author {
+  color: grey;
+  font-weight: bold;
+}
+.authorvalue {
+  font-weight: 500;
+}
+.contentdiv {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 15px;
 }

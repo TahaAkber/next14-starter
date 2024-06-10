@@ -2,6 +2,12 @@ import styles from "./home.module.css";
 import Image from "next/image";
 
 const Home = () => {
+  //const router = useRouter();
+  //Router has many functions we can navigate through different pages and stuff.
+  // router.push("/");
+  // router.replace("/");
+  // router.forward("/navigatetonextpage")
+  // router.back("/navigate to previous page")
   // when we get any error getting data
   // throw new Error("error in Home page");
   return (
